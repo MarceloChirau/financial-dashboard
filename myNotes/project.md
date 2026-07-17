@@ -23,3 +23,6 @@ Search and Pagination: How to implement search and pagination using URL search p
 - **Authentication**: How to add authentication to your application using NextAuth.js and Proxy.  
 
 - **Metadata**: How to add metadata and prepare your application for social sharing.
+
+
+<!-- pnpm() { nvm >/dev/null 2>&1; command pnpm "$@"; } -->
