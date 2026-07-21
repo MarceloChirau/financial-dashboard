@@ -17,8 +17,8 @@
     "next-auth": "5.0.0-beta.31",
     "postcss": "8.5.1",
     "postgres": "^3.4.6",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
     "use-debounce": "^10.0.6",
@@ -27,16 +27,9 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/node": "22.10.7",
-    "@types/react": "19.0.7",
-    "@types/react-dom": "19.0.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.0",
     "eslint-config-next": "^16.2.10"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "bcrypt",
-      "sharp"
-    ]
-  },
-  "packageManager": "pnpm@11.13.0+sha512.88d94724d8f2e6c186744a5584c6e59ecac869ec7ba15e9cb4cd628e8dc7066820b2481d8ee3b51ea8da323a7378068aa58c556a3720d32b7c20a051d088363a"
+  }
 }

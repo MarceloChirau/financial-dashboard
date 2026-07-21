@@ -3,6 +3,7 @@ import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers,fetchInvoiceById } from '@/app/lib/data';
 import {notFound} from 'next/navigation';
 import {Metadata}from 'next';
+import { createElement } from 'react';
  
  export const metadata: Metadata={
   title:'/dashboard/invoices/[id]/edit',
@@ -19,19 +20,19 @@ if(!invoice){
     return notFound();
 }
 
-  return (
-    <main>
-      <Breadcrumbs
-        breadcrumbs={[
-          { label: 'Invoices', href: '/dashboard/invoices' },
-          {
-            label: 'Edit Invoice',
-            href: `/dashboard/invoices/${id}/edit`,
-            active: true,
-          },
-        ]}
-      />
-      <Form invoice={invoice} customers={customers} />
-    </main>
+  return createElement(
+    'main',
+    null,
+    createElement(Breadcrumbs, {
+      breadcrumbs: [
+        { label: 'Invoices', href: '/dashboard/invoices' },
+        {
+          label: 'Edit Invoice',
+          href: `/dashboard/invoices/${id}/edit`,
+          active: true,
+        },
+      ],
+    }),
+    createElement(Form, { invoice, customers }),
   );
 }
